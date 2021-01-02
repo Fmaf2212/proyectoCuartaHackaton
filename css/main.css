@@ -1,0 +1,369 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+ body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    min-height: 100%;
+ }
+
+ .header{
+     grid-area: header;
+     background: #E2E7EA;
+ }
+
+ .main-container{
+     grid-area: main;
+     background: #FFFFFF;
+ }
+
+ .section2{
+     grid-area: section2;
+        background: linear-gradient(90deg, #F9F9FB 21px, transparent 1%) center, linear-gradient(#F9F9FB 21px, transparent 1%) center, white;
+        background-size: 25px 25px;
+ }
+
+ .section3{
+     grid-area: section3;
+     background: #FFFFFF;
+ }
+
+ .section4{
+     grid-area: section4;
+     background: #F5F6FA;
+ }
+ 
+ .footer{
+    grid-area: footer;
+    background: #F5F6FA;
+}
+
+ .grid-container{
+     display: grid;
+     gap: 10px;
+     grid-template-areas: 
+        "header"
+        "main"
+        "section2"
+        "section3"
+        "section4"
+        "footer";
+ }
+
+ .header{
+     /* display: flex;
+     justify-content: space-between;
+     padding: 40px 30px; */
+     display: grid;
+     gap: 1.6em;
+     grid-template-columns: repeat(4, 1fr);
+     grid-template-rows: 2;
+     padding-top: 20px;
+ }
+
+ .logo{
+    padding: 10px 25px;
+ }
+
+ .nav ul{
+     list-style: none;
+     display: flex;
+     justify-content: space-between;
+     padding: 10px 25px;
+ }
+
+ .nav ul li{
+    padding: 0 15px;
+}
+
+.nav ul li .active{
+    color: red;
+}
+
+ a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+ }
+
+ .nav-number{
+    padding: 10px 25px;
+    display: flex;
+    justify-content: center;
+ }
+
+ .button-start{
+    display: flex;
+    justify-content: center;
+ }
+
+.button-start button{
+     padding: 10px 25px;
+     border:1px solid red;
+     border-radius: 5px;
+     color: red;
+     background: transparent;
+     font-weight: 700;
+     cursor: pointer;
+ }
+
+/*HEADER BODY*/
+.header-body{
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 500px;
+}
+
+.header-body .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 500px;
+}
+
+.header-body .text h1,  p,  span, .input{
+    padding: 20px 20px;
+}
+
+.header-body .text h1{
+    font-size: 45px;
+    text-align: left;
+    width: 100%;
+}
+
+.header-body .text p{
+    text-align: left;
+}
+
+.header-body .text span{
+    width: 100%;
+    text-align: left;
+}
+
+.header-body .text .input{
+    width: 100%;
+    text-align: left;
+}
+
+.header-body .text .input input{
+    padding: 10px 10px;
+}
+
+.header-body .text .input button{
+    padding: 10px 40px;
+    background: red;
+    color: white;
+    border-radius: 3px;
+    border: none;
+}
+
+.header-body .img img{
+    position: relative;
+    left: -30px;
+    top: 10px
+}
+
+/*------------------Main Container---------------*/
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 4;
+    padding: 20px 470px;
+}
+
+
+.main-container > .main1, .main4{
+    grid-column: 1/-1;
+}
+
+.main-container .main1{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 2;
+    padding: 40px 0;
+}
+
+.main-container .main1 h4{
+    grid-column: 1/-1;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.main-container .main3{
+    padding: 80px 40px;
+}
+
+.main-container .main3 span{
+    font-size: 12px;
+}
+
+.main-container .main3 h3{
+    padding: 20px 20px;
+    font-size: 30px;
+}
+
+.main-container .main3 p{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.main-container .main3 button{
+    margin: 20px 20px;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    border-radius: 3px;
+    border: none
+}
+
+.main-container .main4{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 2;
+    padding: 40px 0;
+}
+
+.main-container .main4 span {
+    grid-column: 1/-1;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.main-container .main4 article {
+    padding: 20px;
+}
+
+.main-container .main4 article img{
+    padding-bottom: 10px;
+}
+
+.main-container .main4 article span{
+    padding: 20px 0;
+    font-size: 16px;
+    width: 100%;
+}
+
+.main-container .main4 article p{
+    padding: 20px 0;
+}
+
+.main-container .main4 article a{
+    color: red;
+    border: none;
+    padding: 5px 5px;
+    cursor: pointer;
+    background-color: #EFEFEF;
+}
+
+.grid-container .section2{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 2;
+    padding: 100px 480px;
+}
+
+.grid-container .section2 .section2-text, span h2 p{
+    text-align: center;
+}
+
+.grid-container .section2 .section2-text span{
+    margin-bottom: 10px;
+}
+
+.grid-container .section2 .section2-text h2{
+    text-align: center;
+    margin: 10px 0 40px 0;
+}
+
+.grid-container .section2 .section2-text p{
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 150px;
+}
+
+.section2-bloque{
+    display: flex;
+    box-shadow: 0 2px 7px 2px gray;
+}
+
+.section2-bloque article{
+    background-color: white;
+    padding: 20px 10px 5px 20px;
+    border-left: .5px solid whitesmoke;
+}
+
+.section2-bloque article:nth-child(1){
+    background-color: red;
+    color: white;
+    border-left: .5px red solid;
+}
+
+.section2-bloque article .section2-img{
+    padding: 20px 20px;
+}
+
+.section2-bloque article span{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.section2-bloque article p{
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.section3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 3;
+    padding: 100px 150px;
+    gap: 20px;
+}
+
+.section3 .span{
+    grid-column: 1/-1;
+    margin-bottom: 20px;
+    padding: 0 330px;
+}
+
+.section3 .span span{
+    padding: 0;
+    font-size: 15px;
+    color: red;
+}
+
+.section3 .nav-rows{
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 330px 50px;
+}
+
+.section3 .nav-rows span:nth-last-child(1){
+    color: red;
+}
+
+.section3 .testimonials{
+    grid-column: 1/-1;
+}
+
+.section3 .testimonials .testimonials-span{
+    display: flex;
+}
+
+.section3 .testimonials .testimonials-span span, h3{
+    text-align: center;
+}
+
+.section3 .testimonials .testimonials-span span, h3{
+    text-align: center;
+}
